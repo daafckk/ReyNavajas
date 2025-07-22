@@ -1,0 +1,365 @@
+/* Responsive adjustments for Rey Navajas BarberShop */
+
+/* General adjustments for larger screens and tablets (up to 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px; /* Increase padding for content on wider screens */
+    }
+
+    .nav-links {
+        gap: 20px; /* Slightly reduce space between navigation links */
+    }
+
+    .hero h1 {
+        font-size: 4.5rem; /* Slightly reduce hero title font size */
+    }
+
+    .hero p {
+        font-size: 1.4rem; /* Slightly reduce hero subtitle font size */
+    }
+
+    .section-header h2 {
+        font-size: 2.8rem; /* Adjust section header title size */
+    }
+}
+
+/* Tablet and smaller desktop screens (up to 992px) */
+@media (max-width: 992px) {
+    /* Header and Navigation */
+    .nav-links {
+        position: fixed;
+        top: 0; /* Align to the top of the viewport */
+        left: 0;
+        width: 100%;
+        height: 100%; /* Full height to cover the screen */
+        background: rgba(10, 10, 10, 0.98); /* Solid background with slight transparency */
+        backdrop-filter: blur(20px); /* Apply strong blur effect */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links horizontally */
+        justify-content: center; /* Center links vertically in the full screen */
+        padding: 50px 0; /* Add vertical padding */
+        gap: 25px; /* Increase space between stacked links */
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 0.4s ease-in-out; /* Smooth slide-in/out animation */
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+        z-index: 998; /* Ensure it's below the menu toggle but above content */
+    }
+
+    .nav-links.active {
+        transform: translateX(0); /* Slide in when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger menu icon */
+    }
+
+    .nav-buttons .btn-gold {
+        display: none; /* Hide the 'Reservar' button in the main navigation for smaller screens */
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 100px; /* Adjust padding for fixed header */
+        min-height: 600px; /* Ensure minimum height */
+    }
+
+    .hero h1 {
+        font-size: 3.5rem; /* Further reduce hero title size */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Further reduce hero subtitle size */
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 0px; /* Limit image width to prevent it from being too wide */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .about-text {
+        text-align: center; /* Center align text */
+    }
+
+    .about-text .section-header {
+        text-align: center; /* Ensure header inside about text is centered */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-text .section-header .divider {
+        margin-left: auto; /* Center the divider */
+        margin-right: auto;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        grid-template-columns: 1fr; /* Stack contact info and form vertically */
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 30px; /* Adjust padding for contact blocks */
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack footer columns vertically */
+        text-align: center; /* Center align footer content */
+    }
+
+    .footer-links,
+    .footer-services,
+    .footer-contact-info {
+        align-items: center; /* Center align list items and contact details */
+    }
+
+    .footer-links h4,
+    .footer-services h4,
+    .footer-contact-info h4 {
+        margin-bottom: 15px; /* Adjust spacing below footer headings */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack bottom footer elements */
+        text-align: center;
+    }
+
+    .footer-extra {
+        flex-direction: column; /* Stack payment methods and legal links */
+        gap: 15px;
+    }
+}
+
+/* Medium mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 70px 0; /* Reduce section padding */
+    }
+
+    .section-header {
+        margin-bottom: 40px; /* Adjust margin below section headers */
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem; /* Further reduce section header title size */
+    }
+
+    .section-header p {
+        font-size: 1rem; /* Adjust section header paragraph size */
+    }
+
+    .hero h1 {
+        font-size: 2.8rem; /* Significant reduction for hero title */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Significant reduction for hero subtitle */
+    }
+
+    .hero-buttons .btn {
+        width: 90%; /* Make buttons take up more width */
+        max-width: 300px; /* Limit their maximum width */
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Stack service cards vertically */
+    }
+
+    .service-card {
+        padding: 30px 20px; /* Adjust padding for service cards */
+    }
+
+    .service-card h3 {
+        font-size: 1.6rem; /* Adjust service card title size */
+    }
+
+    .price {
+        font-size: 2rem; /* Adjust service price size */
+    }
+
+    .barbers-grid {
+        grid-template-columns: 1fr; /* Stack barber cards vertically */
+    }
+
+    .barber-image {
+        height: 280px; /* Adjust barber image height */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Allow two columns if space permits */
+        gap: 15px; /* Reduce gap in gallery */
+    }
+
+    .gallery-item img {
+        height: 250px; /* Adjust gallery image height */
+    }
+
+    .testimonial-carousel {
+        padding-bottom: 15px; /* Adjust padding for scrollbar */
+    }
+
+    .testimonial-card {
+        min-width: 90%; /* Make cards take 90% width to hint at more content */
+        margin: 0 auto; /* Center individual cards when stacked */
+        padding: 25px; /* Adjust padding for testimonial cards */
+    }
+
+    .client-quote {
+        font-size: 1rem; /* Adjust quote font size */
+    }
+
+    .client-name {
+        font-size: 1.3rem; /* Adjust client name font size */
+    }
+
+    .contact-info h3,
+    .contact-form-container h3 {
+        font-size: 1.8rem; /* Adjust contact headings size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px; /* Adjust form input padding */
+    }
+
+    /* Splash Screen Adjustments */
+    .splash-logo {
+        width: 150px; /* Scale down splash logo */
+        height: 150px;
+    }
+
+    #typing-text {
+        font-size: 2rem; /* Scale down typing text */
+    }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Tighten container padding for very small screens */
+    }
+
+    header {
+        padding: 10px 0; /* Reduce header padding */
+    }
+
+    .nav-logo {
+        width: 45px; /* Smaller logo in header */
+        height: 45px;
+    }
+
+    .logo-text span:first-child {
+        font-size: 1.3rem; /* Smaller main logo text */
+    }
+
+    .logo-text span:last-child {
+        font-size: 0.7rem; /* Smaller subtitle logo text */
+    }
+
+    .hero {
+        min-height: 500px; /* Further reduce hero minimum height */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Even smaller hero title */
+    }
+
+    .hero p {
+        font-size: 0.95rem; /* Even smaller hero subtitle */
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack hero buttons vertically */
+        gap: 15px;
+        align-items: center; /* NEW: Center items horizontally when stacked */
+    }
+
+    .btn {
+        padding: 12px 25px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+
+    .section-header h2 {
+        font-size: 2rem; /* Final adjustment for section header titles */
+    }
+
+    .service-card {
+        padding: 25px 15px; /* Further reduce service card padding */
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem; /* Further reduce service card titles */
+    }
+
+    .price {
+        font-size: 1.8rem; /* Further reduce service prices */
+    }
+
+    .barber-image {
+        height: 250px; /* Final adjustment for barber image height */
+    }
+
+    .barber-info h3 {
+        font-size: 1.4rem; /* Final adjustment for barber names */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack gallery items on smallest screens */
+    }
+
+    .gallery-item img {
+        height: 200px; /* Final adjustment for gallery image height */
+    }
+
+    .contact-info p {
+        font-size: 0.95rem; /* Ensure contact info text is readable */
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; /* Adjust social icon size */
+    }
+
+    .footer-content {
+        gap: 30px; /* Adjust gap in footer content */
+    }
+
+    .footer-logo {
+        width: 60px; /* Smaller footer logo */
+        height: 60px;
+    }
+
+    .footer-links h4,
+    .footer-services h4,
+    .footer-contact-info h4 {
+        font-size: 1.2rem; /* Smaller footer headings */
+    }
+
+    .footer-bottom p,
+    .footer-legal-links a {
+        font-size: 0.75rem; /* Smaller text for copyright and legal links */
+    }
+
+    .payment-methods i {
+        font-size: 1.5rem; /* Smaller payment method icons */
+    }
+
+    /* Splash Screen Adjustments */
+    .splash-logo {
+        width: 120px; /* Smallest splash logo size */
+        height: 120px;
+    }
+
+    #typing-text {
+        font-size: 1.8rem; /* Smallest typing text size */
+    }
+
+    .progress-bar-container {
+        width: 90%; /* Make progress bar narrower */
+    }
+}
