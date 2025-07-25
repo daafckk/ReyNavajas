@@ -1,372 +1,515 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rey Navajas | Barbería Premium</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="IMG/NuevoLogo.png">
-    <link rel="stylesheet" href="CSS/responsive.css">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/splash.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="IMG/NuevoLogo.png" />
+    <link rel="stylesheet" href="CSS/responsive.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/splash.css" />
+  </head>
+  <body>
     <div id="splash-screen">
-        <div class="splash-content">
-            <div class="logo-animation">    
-                <img src="img/NuevoLogo.png" alt="Rey Navajas Logo" class="splash-logo">
-                <div class="logo-shine"></div>
-            </div>
-            <div class="loading-area">
-                <h1 id="typing-text"></h1>
-                <div class="progress-bar-container">
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                    <span class="loading-percentage">0%</span>
-                </div>
-            </div>
+      <div class="splash-content">
+        <div class="logo-animation">
+          <img
+            src="img/NuevoLogo.png"
+            alt="Rey Navajas Logo"
+            class="splash-logo"
+          />
+          <div class="logo-shine"></div>
         </div>
+        <div class="loading-area">
+          <h1 id="typing-text"></h1>
+          <div class="progress-bar-container">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span class="loading-percentage">0%</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="content hidden">
-        <header>
-            <nav>
-                <a href="#" class="logo-brand">
-                    <img src="img/NuevoLogo.png" alt="Rey Navajas Logo" class="nav-logo">
-                    <div class="logo-text">
-                        <span>REY NAVAJAS</span>
-                        <span>BARBERÍASHOP</span>
-                    </div>
-                </a>
-                <div class="nav-links">
-                    <a href="#hero" class="active">Inicio</a>
-                    <a href="#services">Servicios</a>
-                    <a href="#barbers">Barberos</a>
-                    <a href="#gallery">Galería</a>
-                    <a href="#contact">Contacto</a>
-                </div>
-                <div class="nav-buttons">
-                    <div class="menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </nav>
-        </header>
+      <header>
+        <nav>
+          <a href="#" class="logo-brand">
+            <img
+              src="img/NuevoLogo.png"
+              alt="Rey Navajas Logo"
+              class="nav-logo"
+            />
+            <model-viewer
+              src="MODELS/Logo3D.glb"
+              alt="Logo 3D"
+              auto-rotate
+              camera-controls
+              background-color="#ffffff"
+              style="width: 500px; height: 500px"
+            >
+            </model-viewer>
 
-        <section id="hero" class="hero">
-            <div class="hero-video-container">
-                <video autoplay muted loop playsinline class="hero-video">
-                    <source src="video/barber-bg.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-overlay"></div>
+            <div class="logo-text">
+              <span>REY NAVAJAS</span>
+              <span>BARBERÍASHOP</span>
             </div>
-            <div class="hero-content">
-                <h1 class="animate-fade-up">EL ARTE DE LA BARBERÍA</h1>
-                <p class="animate-fade-up delay-1">Donde la tradición se encuentra con el estilo moderno</p>
-                <div class="hero-buttons animate-fade-up delay-2">
-                    <button class="btn btn-gold">Reservar Cita</button>
-                    <button class="btn btn-outline">Ver Servicios</button>
-                </div>
+          </a>
+          <div class="nav-links">
+            <a href="#hero" class="active">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#barbers">Barberos</a>
+            <a href="#gallery">Galería</a>
+            <a href="#contact">Contacto</a>
+          </div>
+          <div class="nav-buttons">
+            <div class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <a href="#services" class="scroll-down-indicator animate-bounce">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </section>
+          </div>
+        </nav>
+      </header>
 
-        <section id="services" class="services section-padding">
-            <div class="container">
-                <div class="section-header animate-fade-in">
-                    <h2>Nuestros Servicios</h2>
-                    <div class="divider"></div>
-                    <p>Cada servicio es una experiencia única diseñada para realzar tu estilo personal</p>
-                </div>
+      <section id="hero" class="hero">
+        <div class="hero-video-container">
+          <video autoplay muted loop playsinline class="hero-video">
+            <source src="video/barber-bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <h1 class="animate-fade-up">EL ARTE DE LA BARBERÍA</h1>
+          <p class="animate-fade-up delay-1">
+            Donde la tradición se encuentra con el estilo moderno
+          </p>
+          <div class="hero-buttons animate-fade-up delay-2">
+            <button class="btn btn-gold">Reservar Cita</button>
+            <button class="btn btn-outline">Ver Servicios</button>
+          </div>
+        </div>
+        <a href="#services" class="scroll-down-indicator animate-bounce">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </section>
 
-                <div class="service-grid">
-                    <div class="service-card animate-slide-up delay-1">
-                        <div class="service-icon">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                        <h3>Corte Clásico</h3>
-                        <p>Corte de cabello con tijeras y máquina para un look impecable y personalizado.</p>
-                        <div class="price">$25</div>
-                        <button class="btn btn-outline btn-small">Ver</button>
-                    </div>
+      <section id="services" class="services section-padding">
+        <div class="container">
+          <div class="section-header animate-fade-in">
+            <h2>Nuestros Servicios</h2>
+            <div class="divider"></div>
+            <p>
+              Cada servicio es una experiencia única diseñada para realzar tu
+              estilo personal
+            </p>
+          </div>
 
-                    <div class="service-card animate-slide-up delay-2">
-                        <div class="service-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h3>Arreglo de Barba</h3>
-                        <p>Diseño, recorte y cuidado profesional de barba con productos premium.</p>
-                        <div class="price">$20</div>
-                        <button class="btn btn-outline btn-small">Ver</button>
-                    </div>
-
-                    <div class="service-card animate-slide-up delay-3">
-                        <div class="service-icon">
-                            <i class="fas fa-spa"></i>
-                        </div>
-                        <h3>Tratamiento Facial</h3>
-                        <p>Hidratación, exfoliación y cuidado de la piel con productos naturales.</p>
-                        <div class="price">$35</div>
-                        <button class="btn btn-outline btn-small">Ver</button>
-                    </div>
-
-                    <div class="service-card animate-slide-up delay-4">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3>Tinte Capilar</h3>
-                        <p>Coloración profesional para cabello y barba con productos de alta calidad.</p>
-                        <div class="price">$40</div>
-                        <button class="btn btn-outline btn-small">Ver</button>
-                    </div>
-                </div>
+          <div class="service-grid">
+            <div class="service-card animate-slide-up delay-1">
+              <div class="service-icon">
+                <i class="fas fa-cut"></i>
+              </div>
+              <h3>Corte Clásico</h3>
+              <p>
+                Corte de cabello con tijeras y máquina para un look impecable y
+                personalizado.
+              </p>
+              <div class="price">$25</div>
+              <button class="btn btn-outline btn-small">Ver</button>
             </div>
-        </section>
 
-        <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image animate-slide-left">
-                        <img src="img/SobreNosotroPrueba.jpg" alt="Herramientas de barbería">
-                    </div>
-                    <div class="about-text animate-slide-right">
-                        <div class="section-header text-left">
-                            <h2>Más Sobre Nosotros</h2>
-                            <div class="divider"></div>
-                        </div>
-                        <p>
-                            En Rey Navajas BarberShop, combinamos la artesanía tradicional con las últimas tendencias en estilo. Nuestro equipo de barberos expertos está dedicado a proporcionarte no solo un corte o un arreglo de barba, sino una experiencia completa de cuidado y relajación. Utilizamos solo los mejores productos para asegurar un acabado impecable y un cuidado superior para tu cabello y piel.
-                        </p>
-                        <p>
-                            Creemos que cada visita debe ser una escapada, un momento para ti. Desde el momento en que entras, te sentirás envuelto en un ambiente de lujo y comodidad, diseñado para que te relajes y disfrutes mientras transformamos tu look.
-                        </p>
-                        <button class="btn btn-gold">Conocer Más</button>
-                    </div>
-                </div>
+            <div class="service-card animate-slide-up delay-2">
+              <div class="service-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>Arreglo de Barba</h3>
+              <p>
+                Diseño, recorte y cuidado profesional de barba con productos
+                premium.
+              </p>
+              <div class="price">$20</div>
+              <button class="btn btn-outline btn-small">Ver</button>
             </div>
-        </section>
 
-        <section id="barbers" class="barbers section-padding">
-            <div class="container">
-                <div class="section-header animate-fade-in">
-                    <h2>Nuestros Barberos</h2>
-                    <div class="divider"></div>
-                    <p>Artistas expertos que transforman tu estilo con precisión y creatividad</p>
-                </div>
-
-                <div class="barbers-grid">
-                    <div class="barber-card animate-slide-up delay-1">
-                        <div class="barber-image" style="background-image: url('img/barber1.jpg');">
-                            <div class="barber-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barber-info">
-                            <h3>Carlos Méndez</h3>
-                            <p>Especialista en cortes clásicos</p>
-                            <div class="experience">10 años de experiencia</div>
-                        </div>
-                    </div>
-
-                    <div class="barber-card animate-slide-up delay-2">
-                        <div class="barber-image" style="background-image: url('IMG/Lucas.jpg');">
-                            <div class="barber-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barber-info">
-                            <h3>Miguel Torres</h3>
-                            <p>Maestro en diseño de barbas</p>
-                            <div class="experience">8 años de experiencia</div>
-                        </div>
-                    </div>
-
-                    <div class="barber-card animate-slide-up delay-3">
-                        <div class="barber-image" style="background-image: url('img/barber3.jpg');">
-                            <div class="barber-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barber-info">
-                            <h3>Ricardo López</h3>
-                            <p>Experto en estilos modernos</p>
-                            <div class="experience">12 años de experiencia</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="service-card animate-slide-up delay-3">
+              <div class="service-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <h3>Tratamiento Facial</h3>
+              <p>
+                Hidratación, exfoliación y cuidado de la piel con productos
+                naturales.
+              </p>
+              <div class="price">$35</div>
+              <button class="btn btn-outline btn-small">Ver</button>
             </div>
-        </section>
 
-        <section id="gallery" class="gallery section-padding">
-            <div class="container">
-                <div class="section-header animate-fade-in">
-                    <h2>Nuestra Galería</h2>
-                    <div class="divider"></div>
-                    <p>Explora el arte de nuestro trabajo y la experiencia que ofrecemos</p>
-                </div>
-
-                <div class="gallery-grid">
-                    <div class="gallery-item animate-zoom-in delay-1">
-                        <img src="img/PeinadoPrueba.png" alt="Corte de cabello moderno">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                    <div class="gallery-item animate-zoom-in delay-2">
-                        <img src="img/gallery2.jpg" alt="Barba bien definida">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                    <div class="gallery-item animate-zoom-in delay-3">
-                        <img src="img/gallery3.jpg" alt="Afeitado clásico">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                    <div class="gallery-item animate-zoom-in delay-4">
-                        <img src="img/gallery4.jpg" alt="Ambiente de barbería">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                    <div class="gallery-item animate-zoom-in delay-5">
-                        <img src="img/gallery5.jpg" alt="Cuidado de la piel en barbería">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                    <div class="gallery-item animate-zoom-in delay-6">
-                        <img src="img/gallery6.jpg" alt="Productos premium de barbería">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="service-card animate-slide-up delay-4">
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Tinte Capilar</h3>
+              <p>
+                Coloración profesional para cabello y barba con productos de
+                alta calidad.
+              </p>
+              <div class="price">$40</div>
+              <button class="btn btn-outline btn-small">Ver</button>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        
-
-        <section id="contact" class="contact section-padding">
-            <div class="container">
-                <div class="section-header animate-fade-in">
-                    <h2>Contáctanos</h2>
-                    <div class="divider"></div>
-                    <p>Estamos listos para ayudarte a agendar tu próxima cita o responder tus preguntas</p>
-                </div>
-
-                <div class="contact-container">
-                    <div class="contact-info animate-slide-left">
-                        <h3>Información de Contacto</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Colonia Centro, CDMX</p>
-                        <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
-                        <p><i class="fas fa-envelope"></i> info@reynavajas.com</p>
-                        <p><i class="fas fa-clock"></i> Lunes - Sábado: 9:00 AM - 8:00 PM</p>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container animate-slide-right">
-                        <h3>Envíanos un Mensaje</h3>
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Tu Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Asunto" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-gold form-submit-btn">Enviar Mensaje</button>
-                            <div id="formMessage" class="form-message"></div>
-                        </form>
-                    </div>
-                </div>
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image animate-slide-left">
+              <img
+                src="img/SobreNosotroPrueba.jpg"
+                alt="Herramientas de barbería"
+              />
             </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-brand">
-                        <img src="img/NuevoLogo.png" alt="Rey Navajas Logo" class="footer-logo">
-                        <p>El arte de la barbería, donde la tradición se encuentra con el estilo moderno.</p>
-                    </div>
-                    <div class="footer-links">
-                        <h4>Enlaces Rápidos</h4>
-                        <ul>
-                            <li><a href="#hero">Inicio</a></li>
-                            <li><a href="#services">Servicios</a></li>
-                            <li><a href="#barbers">Barberos</a></li>
-                            <li><a href="#gallery">Galería</a></li>
-                            <li><a href="#contact">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-services">
-                        <h4>Nuestros Servicios</h4>
-                        <ul>
-                            <li><a href="#">Corte Clásico</a></li>
-                            <li><a href="#">Arreglo de Barba</a></li>
-                            <li><a href="#">Tratamiento Facial</a></li>
-                            <li><a href="#">Tinte Capilar</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-contact-info">
-                        <h4>Contacto</h4>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, CDMX</p>
-                        <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
-                        <p><i class="fas fa-envelope"></i> info@reynavajas.com</p>
-                        <p><i class="fas fa-clock"></i> Lun-Dom: 9am - 8pm</p>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Rey Navajas BarberShop. Todos los derechos reservados.</p>
-                    <div class="footer-extra">
-                        <div class="payment-methods">
-                            <i class="fab fa-cc-visa" aria-label="Visa"></i>
-                            <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
-                            <i class="fab fa-cc-amex" aria-label="American Express"></i>
-                            <i class="fab fa-cc-paypal" aria-label="PayPal"></i>
-                        </div>
-                        <div class="footer-legal-links">
-                            <a href="#">Política de Privacidad</a>
-                            <a href="#">Términos de Servicio</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="about-text animate-slide-right">
+              <div class="section-header text-left">
+                <h2>Más Sobre Nosotros</h2>
+                <div class="divider"></div>
+              </div>
+              <p>
+                En Rey Navajas BarberShop, combinamos la artesanía tradicional
+                con las últimas tendencias en estilo. Nuestro equipo de barberos
+                expertos está dedicado a proporcionarte no solo un corte o un
+                arreglo de barba, sino una experiencia completa de cuidado y
+                relajación. Utilizamos solo los mejores productos para asegurar
+                un acabado impecable y un cuidado superior para tu cabello y
+                piel.
+              </p>
+              <p>
+                Creemos que cada visita debe ser una escapada, un momento para
+                ti. Desde el momento en que entras, te sentirás envuelto en un
+                ambiente de lujo y comodidad, diseñado para que te relajes y
+                disfrutes mientras transformamos tu look.
+              </p>
+              <button class="btn btn-gold">Conocer Más</button>
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
+
+      <section id="barbers" class="barbers section-padding">
+        <div class="container">
+          <div class="section-header animate-fade-in">
+            <h2>Nuestros Barberos</h2>
+            <div class="divider"></div>
+            <p>
+              Artistas expertos que transforman tu estilo con precisión y
+              creatividad
+            </p>
+          </div>
+
+          <div class="barbers-grid">
+            <div class="barber-card animate-slide-up delay-1">
+              <div
+                class="barber-image"
+                style="background-image: url('img/barber1.jpg')"
+              >
+                <div class="barber-overlay">
+                  <div class="social-links">
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" aria-label="Twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="barber-info">
+                <h3>Carlos Méndez</h3>
+                <p>Especialista en cortes clásicos</p>
+                <div class="experience">10 años de experiencia</div>
+              </div>
+            </div>
+
+            <div class="barber-card animate-slide-up delay-2">
+              <div
+                class="barber-image"
+                style="background-image: url('IMG/Lucas.jpg')"
+              >
+                <div class="barber-overlay">
+                  <div class="social-links">
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" aria-label="Twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="barber-info">
+                <h3>Miguel Torres</h3>
+                <p>Maestro en diseño de barbas</p>
+                <div class="experience">8 años de experiencia</div>
+              </div>
+            </div>
+
+            <div class="barber-card animate-slide-up delay-3">
+              <div
+                class="barber-image"
+                style="background-image: url('img/barber3.jpg')"
+              >
+                <div class="barber-overlay">
+                  <div class="social-links">
+                    <a href="#" aria-label="Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                    <a href="#" aria-label="Facebook"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a href="#" aria-label="Twitter"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="barber-info">
+                <h3>Ricardo López</h3>
+                <p>Experto en estilos modernos</p>
+                <div class="experience">12 años de experiencia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery section-padding">
+        <div class="container">
+          <div class="section-header animate-fade-in">
+            <h2>Nuestra Galería</h2>
+            <div class="divider"></div>
+            <p>
+              Explora el arte de nuestro trabajo y la experiencia que ofrecemos
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item animate-zoom-in delay-1">
+              <img src="img/PeinadoPrueba.png" alt="Corte de cabello moderno" />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item animate-zoom-in delay-2">
+              <img src="img/gallery2.jpg" alt="Barba bien definida" />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item animate-zoom-in delay-3">
+              <img src="img/gallery3.jpg" alt="Afeitado clásico" />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item animate-zoom-in delay-4">
+              <img src="img/gallery4.jpg" alt="Ambiente de barbería" />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item animate-zoom-in delay-5">
+              <img
+                src="img/gallery5.jpg"
+                alt="Cuidado de la piel en barbería"
+              />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+            <div class="gallery-item animate-zoom-in delay-6">
+              <img src="img/gallery6.jpg" alt="Productos premium de barbería" />
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <div class="section-header animate-fade-in">
+            <h2>Contáctanos</h2>
+            <div class="divider"></div>
+            <p>
+              Estamos listos para ayudarte a agendar tu próxima cita o responder
+              tus preguntas
+            </p>
+          </div>
+
+          <div class="contact-container">
+            <div class="contact-info animate-slide-left">
+              <h3>Información de Contacto</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Av. Principal 123, Colonia
+                Centro, CDMX
+              </p>
+              <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
+              <p><i class="fas fa-envelope"></i> info@reynavajas.com</p>
+              <p>
+                <i class="fas fa-clock"></i> Lunes - Sábado: 9:00 AM - 8:00 PM
+              </p>
+              <div class="social-icons">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" aria-label="WhatsApp"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="contact-form-container animate-slide-right">
+              <h3>Envíanos un Mensaje</h3>
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Tu Nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Tu Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Asunto"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Tu Mensaje"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold form-submit-btn">
+                  Enviar Mensaje
+                </button>
+                <div id="formMessage" class="form-message"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <img
+                src="img/NuevoLogo.png"
+                alt="Rey Navajas Logo"
+                class="footer-logo"
+              />
+              <p>
+                El arte de la barbería, donde la tradición se encuentra con el
+                estilo moderno.
+              </p>
+            </div>
+            <div class="footer-links">
+              <h4>Enlaces Rápidos</h4>
+              <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#barbers">Barberos</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contact">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="footer-services">
+              <h4>Nuestros Servicios</h4>
+              <ul>
+                <li><a href="#">Corte Clásico</a></li>
+                <li><a href="#">Arreglo de Barba</a></li>
+                <li><a href="#">Tratamiento Facial</a></li>
+                <li><a href="#">Tinte Capilar</a></li>
+              </ul>
+            </div>
+            <div class="footer-contact-info">
+              <h4>Contacto</h4>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Av. Principal 123, CDMX
+              </p>
+              <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
+              <p><i class="fas fa-envelope"></i> info@reynavajas.com</p>
+              <p><i class="fas fa-clock"></i> Lun-Dom: 9am - 8pm</p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              &copy; 2025 Rey Navajas BarberShop. Todos los derechos reservados.
+            </p>
+            <div class="footer-extra">
+              <div class="payment-methods">
+                <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                <i class="fab fa-cc-amex" aria-label="American Express"></i>
+                <i class="fab fa-cc-paypal" aria-label="PayPal"></i>
+              </div>
+              <div class="footer-legal-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Servicio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="JS/main.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </body>
 </html>
